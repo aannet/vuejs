@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  httpd:
+    # build:
+    #     context: ${PROJECT_ROOT}
+    #     dockerfile: ${PROJECT_ROOT}/config/docker/images/httpd-alpine/Dockerfile
+    image: vuejs/httpd-alpine:wip
+    volumes:
+      - ${PWD}/web:/usr/local/apache2/htdocs/
+    ports:
+      - 8081:80
