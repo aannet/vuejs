@@ -6,7 +6,7 @@
     <body>
 
       <div id="app-todo">
-          <p>MICRO-TO-DO-APP</p>
+          <h1>MICRO-TO-DO-APP</h1>
           <form v-on:submit.prevent>
             <input v-model="inputTask" id="inputTaskId" placeholder="Type your next todo thing">
             <button type="submit" v-on:click="submitInputTask" v-on:keyup.13="submitInputTask">Submit</button>

@@ -20,13 +20,15 @@ var apptodo = new Vue({
       }
     },
     submitRAZ: function() {
+        //slowest method but clearer
         while(this.todos.length > 0) {
             this.todos.pop();
         }
     },
     setTaskDone: function (index) {
-        this.todos[index].completed = true;
-        //TODO: refreshing problem after changing state of newly added task
+        // this.todos[index].completed = true;
+        this.$set(this.todos[index], 'completed', true);
+        //Use this syntax for refreshing problem after changing state of newly added task
     }
   }
 })
