@@ -7,15 +7,20 @@
 
       <div id="app-todo">
           <p>MICRO-TO-DO-APP</p>
-          <input v-model="inputTask" id="inputTaskId">
-          <button v-on:click="submitInputTask">Submit</button>
+          <form v-on:submit.prevent>
+            <input v-model="inputTask" id="inputTaskId" placeholder="Type your next todo thing">
+            <button type="submit" v-on:click="submitInputTask" v-on:keyup.13="submitInputTask">Submit</button>
+            <button v-on:click="submitRAZ">RAZ</button>
+          </form>
+          <hr/>
           <ol>
-              <li v-for="todo in todos">
-                  {{ todo.text }}
+              <li v-for="(todo, index) in todos">
+                  {{ todo.title }}
+                  <a href="#" v-on:click="setTaskDone(index)">DONE</a>
+                  <strong v-if="todo.completed">DONE</strong>
               </li>
           </ol>
       </div>
-      <hr/>
 
 
       <script type="text/javascript" src="https://unpkg.com/vue"></script>
