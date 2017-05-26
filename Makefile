@@ -20,7 +20,6 @@ build:
 	docker-compose -f $(COMPOSE_FILE) build
 
 up:
-	$(COMPOSE_BIN) pull
 	$(COMPOSE_BIN) up -d --force-recreate
 
 clean:
