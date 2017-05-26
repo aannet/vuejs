@@ -7,4 +7,9 @@
 * ```make build``` and ```make up```
 
 ### Ressources
-https://github.com/vuejs/vue-devtools
+
+
+|        |        |                                         |
+|--------|--------|-----------------------------------------|
+|  VUEJS | DEBUG  |  https://github.com/vuejs/vue-devtools  |
+| JSON   | TEST   | http://jsonplaceholder.typicode.com     |
