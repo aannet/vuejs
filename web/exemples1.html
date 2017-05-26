@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VUEJS Testing : exemples 1 </title>
+    </head>
+    <body>
+
+        <div id="app">
+            <p>{{ message1 }}</p>
+            <p>{{ message2 }}</p>
+        </div>
+        <hr/>
+
+        <div id="app-2">
+            <span v-bind:title="message3">
+                Hover your mouse over me for a few seconds
+                to see my dynamically bound title!
+            </span>
+        </div>
+        <hr/>
+
+        <div id="app-3">
+            <p v-if="seen">Now you see me</p>
+        </div>
+        <hr/>
+
+        <div id="app-4">
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
+        </div>
+        <hr/>
+
+        <div id="app-5">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessageMethod">Reverse Message</button>
+        </div>
+        <hr/>
+
+        <div id="app-6">
+            <p>{{ message }}</p>
+            <input v-model="message">
+        </div>
+        <hr/>
+
+        <script type="text/javascript" src="https://unpkg.com/vue"></script>
+        <script type="text/javascript" src="exemples1.js"></script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VUEJS Testing : mytodoapp </title>
+    </head>
+    <body>
+
+      <div id="app-todo">
+          <p>MICRO-TO-DO-APP</p>
+          <input v-model="inputTask" id="inputTaskId">
+          <button v-on:click="submitInputTask">Submit</button>
+          <ol>
+              <li v-for="todo in todos">
+                  {{ todo.text }}
+              </li>
+          </ol>
+      </div>
+      <hr/>
+
+
+      <script type="text/javascript" src="https://unpkg.com/vue"></script>
+      <script type="text/javascript" src="mytodoapp.js"></script>
+    </body>
+</html>
